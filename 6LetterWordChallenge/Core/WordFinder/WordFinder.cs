@@ -17,8 +17,8 @@ namespace _6LetterWordChallenge.Core.WordFinder
         public List<CompositeWord> FindWordCombinations()
         {
             List<CompositeWord> compositeWords = new List<CompositeWord>();
-            var wordList = Inputs.Where(x => x.Length == Constants.WordLength).ToList();
-            var partList = Inputs.Where(x => x.Length < Constants.WordLength).ToList();
+            var wordList = Inputs.Where(x => x.Length == Constants.WordLength).Order().ToList();
+            var partList = Inputs.Where(x => x.Length < Constants.WordLength).Order().ToList();
 
             foreach (var word in wordList)
             {
